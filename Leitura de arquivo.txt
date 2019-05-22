@@ -1,0 +1,11 @@
+arq = open("C:/Users/Aluno/Documents/FCFS.txt", 'r')
+line = arq.readline()         
+    while line:
+                aux = line.split("@")
+                aux = aux[1]
+                aux = aux.split("&")
+                aux = aux[0]
+                aux = aux.split(";")
+                proc = Processo(aux[0],int(aux[1]),int(aux[2]))
+                lista.append(proc)
+                line = arq.readline()
